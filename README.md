@@ -13,12 +13,12 @@ This is my **first end-to-end deployed Machine Learning web application** – **
 ---
 
 ## 🌐 Live Demo
-[**Click here to try the app**](link-here)
+[**Click here to try the app**](https://battery-remaining-useful-life-predictor.onrender.com)
 
 ---
 
 ## 📂 Dataset
-[**Dataset Link**](link-here)
+[**Dataset Link**](https://www.kaggle.com/datasets/ignaciovinuales/battery-remaining-useful-life-rul)
 
 ---
 
