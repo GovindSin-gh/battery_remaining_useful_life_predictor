@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUL_Predictor</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="heading">
+        <i class="fa-solid fa-battery-three-quarters"></i>
+        <p>Battery Remaining Useful Life Predictor</p>
+    </div>
+    <div id="show_area">
+        <div id="form">
+            <form action="">
+                <div class="each_entry">
+                    <p class="q">How many times the battery has been fully used and recharged?</p>
+                    <div class="range">
+                        <p>Max:1134</p>
+                        <p>Min:1</p>
+                    </div>
+                    <input type="text" name="cycle_index" id = 'cycle_index' value="560" required="required"><br>
+                </div>
+                <div class="each_entry">
+                    <p class="q">How long(in seconds) the battery lasts before running out?</p>
+                    <div class="range">
+                        <p>Max:958320.370000</p>
+                        <p>Min:8.690000</p>
+                    </div>
+                    <input type="text" name="f1" value="1557.250000" id = 'f1' required="required"><br>
+                </div>
+                <div class="each_entry">
+                    <p class="q">How long(in seconds) the battery stays 'completely full' before it starts to drop?</p>
+                    <div class="range">
+                        <p>Max:406703.768000</p>
+                        <p>Min:-397645.908000</p>
+                    </div>
+                    <input type="text" name="f2" id="f2" value="439.239471" required="required"><br>
+                </div>
+                <div class="each_entry">
+                    <p class="q">How long(in seconds) it charges at top speed before slowing down?</p>
+                    <div class="range">
+                        <p>Max:4.363000</p>
+                        <p>Min:3.043000</p>
+                    </div>
+                    <input type="text" name="f3" id = 'f3' value="3.906000" required="required"><br>
+                </div>
+                <div class="each_entry">
+                    <p class="q">How long(in seconds) the battery lasts in its final stretch before dying?</p>
+                    <div class="range">
+                        <p>Max:4.379000</p>
+                        <p>Min:3.022000</p>
+                    </div>
+                    <input type="text" name="f4" id='f4' value="3.574000" required="required"><br>
+                </div>
+                <div class="each_entry">
+                    <p class="q">The highest battery power level(in volts) right after you start using it?</p>
+                    <div class="range">
+                        <p>Max:245101.117000</p>
+                        <p>Min:-113.584000</p>
+                    </div>
+                    <input type="text" name="f5" id='f5' value="2930.203500" required="required"><br>
+                </div>
+                <div class="each_entry">
+                    <p class="q">The weakest point the battery reaches(in volts) before it starts charging up again?</p>
+                    <div class="range">
+                        <p>Max:880728.100000</p>
+                        <p>Min:5.980000</p>
+                    </div>
+                    <input type="text" name="f6" id='f6' value="3824.260000" required="required"><br>
+                </div>
+                <div class="each_entry">
+                    <p class="q">How long(in seconds) it takes to go from empty to full?</p>
+                    <div class="range">
+                        <p>Max:880728.100000</p>
+                        <p>Min:5.980000</p>
+                    </div>
+                    <input type="text" name="f7" id='f7' value="8320.415000" required="required"><br>
+                </div>
+
+                <button type="button" class="btn">Predict</button>
+                <div id="prediction">
+                    <p id="status">Status = </p>
+                    <p id="rul">Battery Remaining Useful Life = </p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+        <script type = 'text/javascript' src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
